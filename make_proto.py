@@ -3,9 +3,8 @@
 import sys
 import os
 
-from modules.analyze.ana_command import AnaCommand
-from modules.event.event import Event
-
+from modules import analyze as ana
+from modules import command as cmd
 '''
 proto自動生成実行ファイル
 '''
@@ -17,17 +16,9 @@ MAIN_PATH = os.path.dirname(__file__)
 # @details なし
 # @note なし
 def main():
-    print("テスト")
-    # コマンドライン引数解析
-    analyze_command = AnaCommand(sys.argv)
-    event = analyze_command.getEvent()
-    event.execute()
-
-# ダウンロード
-
-# 実行
-
-# 文字コード変換
+    analyze_command = ana.AnaCommand(sys.argv)
+    command :cmd.Command = analyze_command.getCommand()
+    command.execute()
 
 if __name__ == "__main__":
     main()

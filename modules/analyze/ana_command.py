@@ -1,12 +1,13 @@
 import sys
 
-from ..event.event import Event
-from ..component.component import Component
+from .. import command as cmd
+from .. import component as cm
 
 class AnaCommand:
-    def __init__(self, args):
-        self.__event = Event()
-        self.__event.addComponent(Component(self.__event))
 
-    def getEvent(self):
-        return self.__event
+    def __init__(self, args):
+        self.__command :cmd.Command= cmd.Command()
+        self.__command.addComponent(cm.Component())
+
+    def getCommand(self):
+        return self.__command

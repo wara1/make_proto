@@ -5,7 +5,7 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "make_proto.py",
+            "name": "test_make_proto",
             "type": "python",
             "request": "launch",
             "program": "${workspaceFolder}/make_proto.py",
