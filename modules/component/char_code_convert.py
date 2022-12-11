@@ -1,6 +1,6 @@
 from modules.component.component import Component
 from modules.component.component import ComponentResult
 
-class Help(Component):
+class CharCodeConvert(Component):
     def __init__(self):
         super().__init__()
